@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://maslah-aliow-abdow.maslahaliow9.workers.dev/sitemap.xml
