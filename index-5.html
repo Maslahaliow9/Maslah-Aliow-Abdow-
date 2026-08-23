@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maslah Aliow Abdow | Student, Developer & Journalist</title>
+  <meta name="description" content="Official website of Maslah Aliow Abdow — a Kenyan student, developer and young journalist interested in technology, education, digital innovation and entrepreneurship.">
+  <meta name="author" content="Maslah Aliow Abdow">
+  <meta name="google-site-verification" content="fReeiTTFdpUen-p-BLtLc6kfgw5XxgVhv6-btDLi89Y" />
+  <link rel="canonical" href="https://maslahaliow.pages.dev/">
+  <meta property="og:title" content="Maslah Aliow Abdow | Student, Developer & Journalist">
+  <meta property="og:description" content="Official website of Maslah Aliow Abdow — student, developer and young journalist.">
+  <meta property="og:type" content="profile">
+  <meta property="og:url" content="https://maslahaliow.pages.dev/">
+  <meta name="theme-color" content="#080b1a">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Maslah Aliow Abdow",
+    "url": "https://maslahaliow.pages.dev/",
+    "description": "Kenyan student, developer and young journalist interested in technology, education, digital innovation and entrepreneurship.",
+    "jobTitle": "Student, Developer and Journalist",
+    "knowsAbout": ["Software Development","Web Development","Technology","Journalism","Education","Digital Innovation","Entrepreneurship"],
+    "email": "mailto:maslahaliow9@gmail.com",
+    "sameAs": [
+      "https://www.linkedin.com/in/maslah-aliow-abdow-7258a2392",
+      "https://www.upwork.com/freelancers/~0198f79a68316299e5"
+    ]
+  }
+  </script>
+
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top right, rgba(89,59,255,.22), transparent 35%),
+                  radial-gradient(circle at bottom left, rgba(0,153,255,.14), transparent 35%), #080b1a;
+      color: #f4f6ff; line-height: 1.7;
+    }
+    a { color: inherit; text-decoration: none; }
+    .container { width: min(1100px, 92%); margin: auto; }
+    nav {
+      position: sticky; top: 0; z-index: 100; backdrop-filter: blur(15px);
+      background: rgba(8,11,26,.78); border-bottom: 1px solid rgba(255,255,255,.08);
+    }
+    .nav-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo { font-size: 1.15rem; font-weight: 800; letter-spacing: .5px; }
+    .logo span { color: #7c6cff; }
+    .nav-links { display: flex; gap: 18px; font-size: .9rem; }
+    .nav-links a { color: #b9bfd8; }
+    .nav-links a:hover { color: #fff; }
+    .hero { min-height: 86vh; display: flex; align-items: center; padding: 80px 0; }
+    .hero-content { max-width: 800px; }
+    .badge {
+      display: inline-block; padding: 7px 14px; border: 1px solid rgba(124,108,255,.35);
+      border-radius: 999px; background: rgba(124,108,255,.08); color: #aaa0ff;
+      font-size: .85rem; margin-bottom: 22px;
+    }
+    h1 { font-size: clamp(3rem,10vw,6.5rem); line-height: .98; letter-spacing: -4px; margin-bottom: 24px; }
+    .gradient-text {
+      background: linear-gradient(90deg,#8b7cff,#36a9ff); -webkit-background-clip: text;
+      background-clip: text; color: transparent;
+    }
+    .hero p { color: #b9bfd8; font-size: 1.12rem; max-width: 680px; }
+    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
+    .button {
+      display: inline-block; padding: 12px 20px; border-radius: 10px;
+      background: linear-gradient(135deg,#7566ff,#318cff); font-weight: 700;
+      box-shadow: 0 10px 35px rgba(76,78,255,.2);
+    }
+    .button.secondary { background: transparent; border: 1px solid rgba(255,255,255,.13); box-shadow: none; }
+    section { padding: 90px 0; }
+    .section-title { font-size: 2.2rem; margin-bottom: 14px; }
+    .section-subtitle { color: #9da4c2; margin-bottom: 35px; }
+    .card-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+    .card {
+      padding: 28px; border-radius: 18px; border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.035);
+    }
+    .card h3 { margin-bottom: 10px; font-size: 1.3rem; }
+    .card p { color: #aeb5d0; }
+    .project {
+      border-color: rgba(91,116,255,.25);
+      background: linear-gradient(135deg,rgba(88,74,255,.10),rgba(35,147,255,.05));
+    }
+    .project-tag { display: inline-block; color: #8db8ff; font-size: .8rem; font-weight: bold; margin-bottom: 12px; }
+    .contact-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
+    .contact-card {
+      display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
+      padding: 26px; border-radius: 18px; border: 1px solid rgba(255,255,255,.08);
+      background: rgba(255,255,255,.035); transition: border-color .2s, transform .2s;
+    }
+    .contact-card:hover { border-color: rgba(124,108,255,.4); transform: translateY(-2px); }
+    .contact-icon { font-size: 1.6rem; }
+    .contact-card h3 { font-size: 1.05rem; }
+    .contact-card span { color: #9da4c2; font-size: .88rem; word-break: break-all; }
+    footer { padding: 35px 0; border-top: 1px solid rgba(255,255,255,.08); color: #858da9; text-align: center; font-size: .9rem; }
+    @media (max-width: 700px) {
+      .nav-links { display: none; }
+      .hero { min-height: 75vh; }
+      h1 { letter-spacing: -2px; }
+      .card-grid { grid-template-columns: 1fr; }
+      .contact-grid { grid-template-columns: 1fr; }
+      section { padding: 65px 0; }
+    }
+  </style>
+</head>
+
+<body>
+  <nav>
+    <div class="container nav-inner">
+      <a class="logo" href="#home">Maslah<span>.</span></a>
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#interests">Interests</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container hero-content">
+        <div class="badge">Official Website</div>
+        <h1>Maslah Aliow<br><span class="gradient-text">Abdow</span></h1>
+        <p>Student • Developer • Journalist • Technology Enthusiast</p>
+        <p style="margin-top:16px;">
+          Welcome to the official website of Maslah Aliow Abdow — a young Kenyan
+          interested in technology, education, digital innovation, journalism and entrepreneurship.
+        </p>
+        <div class="buttons">
+          <a class="button" href="#about">About Me</a>
+          <a class="button secondary" href="#projects">My Projects</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">About Me</h2>
+        <p class="section-subtitle">A little about who I am and what I do.</p>
+        <div class="card">
+          <p>Maslah Aliow Abdow is a Kenyan student, aspiring developer and young journalist with an interest in technology, education, communication and digital innovation.</p>
+          <br>
+          <p>Alongside his education, Maslah explores software development and digital technologies, with a particular interest in creating practical tools that can solve everyday problems.</p>
+          <br>
+          <p>He is also interested in journalism and enjoys communicating information, discussing issues and creating useful content for his community.</p>
+          <br>
+          <p>His long-term goal is to continue developing his skills in technology, education, communication and entrepreneurship while creating projects that can positively impact other people.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="container">
+        <h2 class="section-title">Projects</h2>
+        <p class="section-subtitle">Things I am building and exploring.</p>
+        <div class="card-grid">
+          <div class="card project">
+            <div class="project-tag">WEB APP • PWA</div>
+            <h3>Duka Debt</h3>
+            <p>A web-based debt tracking application designed to help users keep track of people who owe them money and the amounts involved.</p>
+            <div class="buttons">
+              <a class="button" href="https://duka-debt.maslahaliow9.workers.dev/" target="_blank" rel="noopener">Visit Duka Debt</a>
+            </div>
+          </div>
+          <div class="card">
+            <h3>More Projects Coming</h3>
+            <p>This space will feature future technology, software and digital projects created by Maslah Aliow Abdow.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="interests">
+      <div class="container">
+        <h2 class="section-title">Interests</h2>
+        <p class="section-subtitle">Areas I enjoy learning about and exploring.</p>
+        <div class="card-grid">
+          <div class="card"><h3>💻 Technology</h3><p>Web development, software, digital tools and emerging technologies.</p></div>
+          <div class="card"><h3>📰 Journalism</h3><p>Communication, reporting, writing and sharing useful information.</p></div>
+          <div class="card"><h3>🎓 Education</h3><p>Learning, academic development and helping make information easier to understand.</p></div>
+          <div class="card"><h3>🚀 Entrepreneurship</h3><p>Building useful ideas and exploring ways technology can solve real-world problems.</p></div>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Email, LinkedIn, Upwork, and Resume — all in one place.</p>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:maslahaliow9@gmail.com">
+            <span class="contact-icon">✉️</span>
+            <h3>Email</h3>
+            <span>maslahaliow9@gmail.com</span>
+          </a>
+          <a class="contact-card" href="https://www.linkedin.com/in/maslah-aliow-abdow-7258a2392" target="_blank" rel="noopener">
+            <span class="contact-icon">💼</span>
+            <h3>LinkedIn</h3>
+            <span>Maslah Aliow Abdow</span>
+          </a>
+          <a class="contact-card" href="https://www.upwork.com/freelancers/~0198f79a68316299e5" target="_blank" rel="noopener">
+            <span class="contact-icon">🟢</span>
+            <h3>Upwork</h3>
+            <span>Hire me on Upwork</span>
+          </a>
+          <a class="contact-card" href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjMgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago1IDAgb2JqCjw8Ci9Db250ZW50cyAxMCAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDkgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0NvbnRlbnRzIDExIDAgUiAvTWVkaWFCb3ggWyAwIDAgNjEyIDc5MiBdIC9QYXJlbnQgOSAwIFIgL1Jlc291cmNlcyA8PAovRm9udCAxIDAgUiAvUHJvY1NldCBbIC9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUkgXQo+PiAvUm90YXRlIDAgL1RyYW5zIDw8Cgo+PiAKICAvVHlwZSAvUGFnZQo+PgplbmRvYmoKNyAwIG9iago8PAovUGFnZU1vZGUgL1VzZU5vbmUgL1BhZ2VzIDkgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9BdXRob3IgKFwoYW5vbnltb3VzXCkpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjA4MjMwNzU0MDgrMDAnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjA4MjMwNzU0MDgrMDAnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKFwoYW5vbnltb3VzXCkpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKOSAwIG9iago8PAovQ291bnQgMiAvS2lkcyBbIDUgMCBSIDYgMCBSIF0gL1R5cGUgL1BhZ2VzCj4+CmVuZG9iagoxMCAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAxOTY2Cj4+CnN0cmVhbQpHYXVgVD5CQUxYJ1JuQjMzMDJgNT91OXVSZSdgb0ZbJXA6MEQwQlJjNzJRJj9LTEBAL1FDXCRNNGQnVWUiUUNiXFZwLG9jKWJKcXRKKjZVYmlMYiRRVUgtLWUmSDkzMV8lLlpZSjcjQSwrUkRIUzRGOTNeZHBMW1k4ZGgpPUdublRvSCxVPGxIRDpxN1dgTyxIIWteRkRIRUBZSG9GKlxNVEJtWkZFVU5sL109N1YmX3RkIz5mXkYzPDo7OyIicnU2WEsrb0wuOXBCQ1RqTzdeLTFPXUQ4aHA5ND9gPHBLKkhQZkdgPy1XVmleb2RaaScnK3JWL0lfWzhXIk0tcT9DVjczVSw4YTZHOEs/IkVwKUFwNDY5JyhPQFMzKylwb3IzdF02Y1NuT0ppRVcxQFJhcGFGTmBQJFFNODZhYWUxaE41cWNJbz1nMD5BbD85bzpLNEQlSjNFYyxMViFQLmtDaUFMMElNYUEpPCI4bGc0KWxCWlV1TSszQT1aZCMxSj5CcnI3NW1bIklbI0BALDk1bVBTc0sjOThJJzJtJ0pwbFIuXDk6SnI5Tj1jOylGRFFnWGhASU5vMlZbcFxLMmBJO0RoYDo3UHJxPlBUUEMocFtVVDs1Tj9UZE5PYzo9XkM5NEZ0c2AjKD1qQWpVTXU/J2YtSFclY09mRk5UOCVEamtKX0NXNW9TI1VnXWQwYTM8SE1sRy8iImliQiQxY2ovWmBYYUFXSmhvXDk6N1xOakErW2Y4WydFZCc+KWMiSCQvbDY6QU5WOGpyRlw5ZCJMckcsaWArL0ppWTBlKDc+SlRLMT5jP1RFaCNPUlNgdDgjXSlPQ11fJk0+UCJNc1ViSl1tQzBLPmAvSFIkVCgxMS9TcTUlI1NbQEJJVUt0Q0pycHE6QHByb0YrcCpEbCU3b01kIVQsRWZmOFhvbzxsUm1OYztjblFXMGAsRGJPInApKXNSXEJeJyZcYStRa2xJLXBRWUA1KT9KQkYhR1RjJThsMklyNDBeOC8qQCk+KzJXbiZPRWBgWGhbQDxhJl05OFdjTFYuZVgwU20sYzFqYDFvJjRbM0QoLXRXaDMrcEsrciEzXSRXWEFBcktbW0cwLmE5R3ReNENCTEdbUmg4bD5NN01NLGNfLnJwKk9aISdkbGg/MCkmK2ZgOFNsWUdBcEBAUFhcK15QTyJPQEYvI09VKktbImhcX2ZyUzh1WkNZOU1nXkUnPCsyP0smJ0FVbVAtPm1RM1wkOzZVKWdFOEZhKDkhQy5tX1NITl5fcik8JCFtMDZccThtVCl0MClESFdSOS5WJD5LbVorVHVWYVNrWD8sXFdqSUJEWmltP0huSmgrXVIiZyRUInFlZjA7RWxeOkYhVzg/KGNLTD9fKlFpY2pvPHNzbm5ucEAqNSI9bE4yOU4pYEYvc0RWcm8lciRwNi0nZT1qIWZDQlBzTVl1UC1IT0NAOTVJaC5pP1R0OF47WyZuVCxTZTFab1JDbFhaNygxIlVzWXAwbjplPm5tZEhLMS9hQSJfI0xrZ0VRUUlGcSxrLVBAOEdQWTgvaT1AbDoidVJ0ZjtOa2JoTlI8czYoaiVgY0YpSkdFc2o5KE0nZWxbOmNtamY+S3M8VmFocEZZPy9KaCM2UUE0NlVmTz9aXVlQKFkoR1VbJmkqI1VWMzRBWDEpWXBFMSltSF0zJ05bT2o8M15XcUcoXVMlXiJ0OzleI1onWkgxKThVOE5oNDtDTlsmKGEsLyorLGZnQlxjR0tcayFYRm9hZihVa0g6TV82bGJaXC0nNE07YjlOYCRPZyYkNCtjIlQiPnE2M1Q0VSwjQzFbUDxdQ0pbQG8uWylTOClEPjVdblwwKHI7bC1DJ0JcUDwnOGA9cHU5K2MmNEt1VVdta1M4cWdhYElQPSZcPTRXY2tKVyMhZ1NuUVBFYUxgRTZhWGpCTjVHKytlKU5aWm8pRVc7L3FLPUU+LUkpPmlHUiI+IXRvSVtnY2IjI3E3Uz5FXmFcISQ1VmEoRVVjZk1ILictUCc2TFlMXGtTWio5RCUiXTswOTpoYm40PkZOJHE1SSlePD9bU0ouZzNKU3RHYy5CPVJnLz0jSiktUEw1dWJGXTklXmksZ0NtZ0JCVmNlJS0yXVtrQz5oVTs2QERJbFM/a1YmZzJHT0BjV1MzZ1I6UGwoRSlLNjo4VV84IS1DKS5bNFxqK3U/Yy8yNFhRaFdKUlA/clZLSlJUSzUoVmVfRl8wRjFEIlhfKE9DS1pxRltNXDwwTy9RLm0naHBnI0ROYktHIlUzQEpNXS9zUiNGbVs4czlmOFtrQWVJYnQpVFlHcnFUM1JHL2BjZU5wOlpkP05WWDhkJVVIcW9PXkxpRGBrWi0ncG48aG81cV8iWCZKYChFJShiNnFncU5nQF1hL3VCRWVudSNlUGtmWktAMkhDOWJMOG9LW2BbaSZ0WCpQQ2k0K0wrQDZdL0BpMjxLSGgoOVdrLyxmUVozMnNBU1d0OyVGI1RDXGg5cTs/bG5tISNWaT9fR0tDLmQsRzJHIylCYS4+JS5fMCxOREhJZktDYm5MKCc/L1JYS01hPzxbXGsjc00mZzJIPWNbbUU+bDpbUl9WK3MrcmtTMX4+ZW5kc3RyZWFtCmVuZG9iagoxMSAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAyODUKPj4Kc3RyZWFtCkdhcicjZDdWOzEnU2MpUidgWSJVJlkjbFhdI3RSJydSQ3UsXzk0QWspcT9kdVAlc09TNF5EJ2AzS1RIY0teW3JmYUxVQUtbbHB0RUdoYnFfImF0dFI2aWwtJzhTP1hLcnFuPTRXM0IsNk8pMy8yNjdRLUBbaCxVUVg9RDI7VVdSJihHZzctUXM3Z0JuVCVXQ3E+dHNDbHFQQSlgSElvTmBJX0NNY0s3OTIwY1dqK1NyX0wobig3J0JKLzdwM0thbGJYaW8kX14rKiQhb08rc1FcZ2krIiRRYGBwOnNpXUUpYEBkS1dOciMla1AsODM0Jk5JMiRiaDhZY3UvPllhayZfRSdyZExoNmY9UCZaV1AjdTZccCdvL1U+MFJ+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEyCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTEyIDAwMDAwIG4gCjAwMDAwMDAyMTkgMDAwMDAgbiAKMDAwMDAwMDMzMSAwMDAwMCBuIAowMDAwMDAwNDQ2IDAwMDAwIG4gCjAwMDAwMDA2NDAgMDAwMDAgbiAKMDAwMDAwMDgzNCAwMDAwMCBuIAowMDAwMDAwOTAyIDAwMDAwIG4gCjAwMDAwMDExODIgMDAwMDAgbiAKMDAwMDAwMTI0NyAwMDAwMCBuIAowMDAwMDAzMzA1IDAwMDAwIG4gCnRyYWlsZXIKPDwKL0lEIApbPGJhNGExMTk1MzBhODVmNDE5N2RkOGE3NTBkZGI0MGYyPjxiYTRhMTE5NTMwYTg1ZjQxOTdkZDhhNzUwZGRiNDBmMj5dCiUgUmVwb3J0TGFiIGdlbmVyYXRlZCBQREYgZG9jdW1lbnQgLS0gZGlnZXN0IChvcGVuc291cmNlKQoKL0luZm8gOCAwIFIKL1Jvb3QgNyAwIFIKL1NpemUgMTIKPj4Kc3RhcnR4cmVmCjM2ODEKJSVFT0YK" download="Maslah_Aliow_Abdow_Resume.pdf">
+            <span class="contact-icon">📄</span>
+            <h3>Resume</h3>
+            <span>Download PDF</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">© 2026 Maslah Aliow Abdow. All rights reserved.</div>
+  </footer>
+</body>
+</html>
