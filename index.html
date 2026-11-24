@@ -84,11 +84,19 @@
     @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(46,230,166,0); } 100% { box-shadow: 0 0 0 0 rgba(46,230,166,0); } }
     h1 { font-size: clamp(3rem,10vw,6.5rem); line-height: .98; letter-spacing: -4px; margin-bottom: 24px; }
     .gradient-text {
-      background: linear-gradient(90deg,var(--violet),var(--blue),var(--green),var(--orange),var(--pink));
-      background-size: 300% 100%; animation: shift 8s linear infinite;
-      -webkit-background-clip: text; background-clip: text; color: transparent;
+      background: linear-gradient(90deg,#8b7cff,#36a9ff,#2ee6a6,#ffb347,#ff5fa2,#8b7cff);
+      background-size: 300% 100%;
+      -webkit-background-clip: text; background-clip: text;
+      -webkit-text-fill-color: transparent; color: transparent;
+      animation: shift 8s linear infinite, glow 8s ease-in-out infinite;
     }
     @keyframes shift { to { background-position: 300% 0; } }
+    @keyframes glow {
+      0%, 100% { filter: drop-shadow(0 0 12px rgba(139,124,255,.75)) drop-shadow(0 0 34px rgba(139,124,255,.45)); }
+      25% { filter: drop-shadow(0 0 12px rgba(54,169,255,.75)) drop-shadow(0 0 34px rgba(54,169,255,.45)); }
+      50% { filter: drop-shadow(0 0 12px rgba(46,230,166,.75)) drop-shadow(0 0 34px rgba(46,230,166,.45)); }
+      75% { filter: drop-shadow(0 0 12px rgba(255,95,162,.75)) drop-shadow(0 0 34px rgba(255,95,162,.45)); }
+    }
     .roles { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
     .roles span { padding: 6px 14px; border-radius: 999px; font-size: .88rem; font-weight: 600; border: 1px solid; }
     .roles span:nth-child(1) { color: var(--violet); border-color: rgba(139,124,255,.4); background: rgba(139,124,255,.1); }
@@ -107,11 +115,6 @@
     .button.secondary { background: transparent; border: 1px solid rgba(255,255,255,.18); box-shadow: none; }
     .button.secondary:hover { border-color: var(--violet); background: rgba(139,124,255,.1); }
 
-    /* Stats */
-    .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 50px; max-width: 860px; }
-    .stat { padding: 18px; border-radius: 16px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); text-align: center; }
-    .stat b { display: block; font-size: 1.7rem; background: linear-gradient(90deg,var(--blue),var(--green)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .stat small { color: var(--muted); font-size: .8rem; }
 
     /* Sections */
     section { padding: 90px 0; }
@@ -145,6 +148,8 @@
     /* Quote */
     .quote { margin-top: 20px; border-left: 4px solid var(--pink); background: linear-gradient(90deg,rgba(255,95,162,.1),transparent); }
     .quote p { font-style: italic; color: #d9dcf2; font-size: 1.05rem; }
+    .quote small { display: block; margin-top: 8px; color: #9da4c2; font-size: .85rem; }
+    .quote.gentle { border-left-color: var(--green); background: linear-gradient(90deg,rgba(46,230,166,.1),transparent); }
 
     /* Colour-coded cards */
     .c1:hover { border-color: rgba(139,124,255,.6); } .c2:hover { border-color: rgba(54,169,255,.6); }
@@ -167,9 +172,6 @@
 
     footer { padding: 35px 0; border-top: 1px solid rgba(255,255,255,.08); color: #858da9; text-align: center; font-size: .9rem; }
 
-    /* Reveal on scroll */
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s; }
-    .reveal.show { opacity: 1; transform: none; }
 
     @media (max-width: 760px) {
       .nav-inner { flex-direction: column; padding: 10px 0; gap: 6px; }
@@ -177,12 +179,10 @@
       .hero { min-height: 80vh; padding-top: 50px; }
       h1 { letter-spacing: -2px; }
       .card-grid, .contact-grid { grid-template-columns: 1fr; }
-      .stats { grid-template-columns: repeat(2,1fr); }
       section { padding: 60px 0; }
     }
     @media (prefers-reduced-motion: reduce) {
       * { animation: none !important; transition: none !important; }
-      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
@@ -208,7 +208,7 @@
     <section class="hero" id="home">
       <div class="container hero-content">
         <div class="badge"><i></i> Official Website · Open to freelance work</div>
-        <h1>Maslah Aliow<br><span class="gradient-text">Abdow</span></h1>
+        <h1 class="gradient-text">Maslah Aliow<br>Abdow</h1>
         <div class="roles">
           <span>Researcher</span><span>Founder</span><span>Freelancer</span><span>Technology Enthusiast</span><span>Innovator</span>
         </div>
@@ -221,17 +221,11 @@
           <a class="button" href="#projects">View My Projects</a>
           <a class="button secondary" href="#contact">Get In Touch</a>
         </div>
-        <div class="stats">
-          <div class="stat"><b>3</b><small>Live projects</small></div>
-          <div class="stat"><b>AI</b><small>Focus area</small></div>
-          <div class="stat"><b>PWA</b><small>Web apps</small></div>
-          <div class="stat"><b>KE</b><small>Based in Kenya</small></div>
-        </div>
       </div>
     </section>
 
     <section id="about">
-      <div class="container reveal">
+      <div class="container">
         <h2 class="section-title">About Me</h2>
         <p class="section-subtitle">A little about who I am and what I do.</p>
         <div class="card">
@@ -244,11 +238,15 @@
         <div class="card quote">
           <p>&laquo;You don't need to know everything to build something meaningful. You need curiosity, initiative, persistence, and the willingness to keep learning.&raquo;</p>
         </div>
+        <div class="card quote gentle">
+          <p>&ldquo;Beyond a wholesome discipline, be gentle with yourself.&rdquo;</p>
+          <small>— Max Ehrmann, Desiderata</small>
+        </div>
       </div>
     </section>
 
     <section id="education">
-      <div class="container reveal">
+      <div class="container">
         <h2 class="section-title">Education</h2>
         <div class="card" style="margin-top:30px;">
           <p>Maslah studied at <strong>Takaba Boys' Senior School</strong>, a well-regarded secondary school in Kenya.</p>
@@ -259,7 +257,7 @@
     </section>
 
     <section id="projects">
-      <div class="container reveal">
+      <div class="container">
         <h2 class="section-title">Projects</h2>
         <p class="section-subtitle">Things I am building and exploring.</p>
         <div class="card-grid">
@@ -301,7 +299,7 @@
     </section>
 
     <section id="research">
-      <div class="container reveal">
+      <div class="container">
         <h2 class="section-title">Research</h2>
         <p class="section-subtitle">Independent Researcher — investigating questions, exploring unfamiliar subjects, and developing ideas from what I discover.</p>
         <div class="card-grid">
@@ -314,7 +312,7 @@
     </section>
 
     <section id="interests">
-      <div class="container reveal">
+      <div class="container">
         <h2 class="section-title">Interests</h2>
         <p class="section-subtitle">Areas I enjoy learning about and exploring.</p>
         <div class="card-grid">
@@ -326,5 +324,8 @@
     </section>
 
     <section id="contact">
-      <div class="container reveal">
-        <h2
+      <div class="container">
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-subtitle">Email, LinkedIn, Upwork, and Resume — all in one place.</p>
+        <div class="contact-grid">
+          <a class="contact-card" href="mailto:maslahaliow9@gmail.
