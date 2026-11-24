@@ -12,7 +12,7 @@
   <meta property="og:description" content="Official website of Maslah Aliow Abdow — researcher, founder, freelancer, and technology enthusiast.">
   <meta property="og:type" content="profile">
   <meta property="og:url" content="https://maslahaliow.pages.dev/">
-  <meta name="theme-color" content="#080b1a">
+  <meta name="theme-color" content="#070a18">
 
   <script type="application/ld+json">
   {
@@ -32,84 +32,164 @@
   </script>
 
   <style>
+    :root {
+      --bg: #070a18;
+      --violet: #8b7cff;
+      --blue: #36a9ff;
+      --pink: #ff5fa2;
+      --orange: #ffb347;
+      --green: #2ee6a6;
+      --text: #f4f6ff;
+      --muted: #aab1cf;
+    }
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: radial-gradient(circle at top right, rgba(89,59,255,.22), transparent 35%),
-                  radial-gradient(circle at bottom left, rgba(0,153,255,.14), transparent 35%), #080b1a;
-      color: #f4f6ff; line-height: 1.7;
+      font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
+      background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden;
     }
     a { color: inherit; text-decoration: none; }
-    .container { width: min(1100px, 92%); margin: auto; }
+    .container { width: min(1120px, 92%); margin: auto; }
+
+    /* Floating colour orbs */
+    .orb { position: fixed; border-radius: 50%; filter: blur(110px); opacity: .32; z-index: 0; pointer-events: none; }
+    .orb.o1 { width: 460px; height: 460px; background: var(--violet); top: -120px; right: -120px; animation: float 14s ease-in-out infinite; }
+    .orb.o2 { width: 380px; height: 380px; background: var(--blue); bottom: -100px; left: -100px; animation: float 17s ease-in-out infinite reverse; }
+    .orb.o3 { width: 300px; height: 300px; background: var(--pink); top: 45%; left: 55%; opacity: .14; animation: float 20s ease-in-out infinite; }
+    @keyframes float { 0%,100% { transform: translate(0,0); } 50% { transform: translate(30px,-40px); } }
+    nav, main, footer { position: relative; z-index: 1; }
+
+    /* Nav */
     nav {
-      position: sticky; top: 0; z-index: 100; backdrop-filter: blur(15px);
-      background: rgba(8,11,26,.78); border-bottom: 1px solid rgba(255,255,255,.08);
+      position: sticky; top: 0; z-index: 100; backdrop-filter: blur(16px);
+      background: rgba(7,10,24,.75); border-bottom: 1px solid rgba(255,255,255,.08);
     }
-    .nav-inner { min-height: 68px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .logo { font-size: 1.15rem; font-weight: 800; letter-spacing: .5px; }
-    .logo span { color: #7c6cff; }
-    .nav-links { display: flex; gap: 18px; font-size: .9rem; }
-    .nav-links a { color: #b9bfd8; }
-    .nav-links a:hover { color: #fff; }
-    .hero { min-height: 86vh; display: flex; align-items: center; padding: 80px 0; }
-    .hero-content { max-width: 800px; }
+    .nav-inner { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+    .logo { font-size: 1.2rem; font-weight: 800; letter-spacing: .5px; }
+    .logo span { background: linear-gradient(90deg,var(--pink),var(--orange)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .nav-links { display: flex; gap: 6px; font-size: .9rem; overflow-x: auto; scrollbar-width: none; }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a { color: var(--muted); padding: 6px 12px; border-radius: 999px; white-space: nowrap; transition: .2s; }
+    .nav-links a:hover { color: #fff; background: rgba(139,124,255,.18); }
+
+    /* Hero */
+    .hero { min-height: 90vh; display: flex; align-items: center; padding: 80px 0 60px; }
+    .hero-content { max-width: 860px; }
     .badge {
-      display: inline-block; padding: 7px 14px; border: 1px solid rgba(124,108,255,.35);
-      border-radius: 999px; background: rgba(124,108,255,.08); color: #aaa0ff;
-      font-size: .85rem; margin-bottom: 22px;
+      display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px;
+      border: 1px solid rgba(46,230,166,.35); border-radius: 999px;
+      background: rgba(46,230,166,.08); color: var(--green); font-size: .85rem; margin-bottom: 24px;
     }
+    .badge i { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(46,230,166,.6); animation: pulse 2s infinite; }
+    @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(46,230,166,0); } 100% { box-shadow: 0 0 0 0 rgba(46,230,166,0); } }
     h1 { font-size: clamp(3rem,10vw,6.5rem); line-height: .98; letter-spacing: -4px; margin-bottom: 24px; }
     .gradient-text {
-      background: linear-gradient(90deg,#8b7cff,#36a9ff); -webkit-background-clip: text;
-      background-clip: text; color: transparent;
+      background: linear-gradient(90deg,var(--violet),var(--blue),var(--green),var(--orange),var(--pink));
+      background-size: 300% 100%; animation: shift 8s linear infinite;
+      -webkit-background-clip: text; background-clip: text; color: transparent;
     }
-    .hero p { color: #b9bfd8; font-size: 1.12rem; max-width: 680px; }
+    @keyframes shift { to { background-position: 300% 0; } }
+    .roles { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
+    .roles span { padding: 6px 14px; border-radius: 999px; font-size: .88rem; font-weight: 600; border: 1px solid; }
+    .roles span:nth-child(1) { color: var(--violet); border-color: rgba(139,124,255,.4); background: rgba(139,124,255,.1); }
+    .roles span:nth-child(2) { color: var(--orange); border-color: rgba(255,179,71,.4); background: rgba(255,179,71,.1); }
+    .roles span:nth-child(3) { color: var(--green); border-color: rgba(46,230,166,.4); background: rgba(46,230,166,.1); }
+    .roles span:nth-child(4) { color: var(--blue); border-color: rgba(54,169,255,.4); background: rgba(54,169,255,.1); }
+    .roles span:nth-child(5) { color: var(--pink); border-color: rgba(255,95,162,.4); background: rgba(255,95,162,.1); }
+    .hero p.lead { color: var(--muted); font-size: 1.12rem; max-width: 680px; }
     .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
     .button {
-      display: inline-block; padding: 12px 20px; border-radius: 10px;
-      background: linear-gradient(135deg,#7566ff,#318cff); font-weight: 700;
-      box-shadow: 0 10px 35px rgba(76,78,255,.2);
+      display: inline-block; padding: 13px 24px; border-radius: 12px; font-weight: 700;
+      background: linear-gradient(135deg,#7566ff,#318cff); box-shadow: 0 10px 35px rgba(76,78,255,.3);
+      transition: transform .2s, box-shadow .2s;
     }
-    .button.secondary { background: transparent; border: 1px solid rgba(255,255,255,.13); box-shadow: none; }
+    .button:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(76,78,255,.45); }
+    .button.secondary { background: transparent; border: 1px solid rgba(255,255,255,.18); box-shadow: none; }
+    .button.secondary:hover { border-color: var(--violet); background: rgba(139,124,255,.1); }
+
+    /* Stats */
+    .stats { display: grid; grid-template-columns: repeat(4,1fr); gap: 14px; margin-top: 50px; max-width: 860px; }
+    .stat { padding: 18px; border-radius: 16px; background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.08); text-align: center; }
+    .stat b { display: block; font-size: 1.7rem; background: linear-gradient(90deg,var(--blue),var(--green)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+    .stat small { color: var(--muted); font-size: .8rem; }
+
+    /* Sections */
     section { padding: 90px 0; }
-    .section-title { font-size: 2.2rem; margin-bottom: 14px; }
-    .section-subtitle { color: #9da4c2; margin-bottom: 35px; }
-    .card-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 18px; }
+    .section-title { font-size: 2.3rem; margin-bottom: 12px; letter-spacing: -1px; }
+    .section-title::after { content: ""; display: block; width: 60px; height: 4px; border-radius: 4px; margin-top: 10px; background: linear-gradient(90deg,var(--violet),var(--pink)); }
+    .section-subtitle { color: #9da4c2; margin-bottom: 38px; }
+    .card-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
     .card {
-      padding: 28px; border-radius: 18px; border: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.035);
+      padding: 28px; border-radius: 20px; border: 1px solid rgba(255,255,255,.09);
+      background: rgba(255,255,255,.04); transition: transform .25s, border-color .25s;
     }
+    .card:hover { transform: translateY(-4px); border-color: rgba(139,124,255,.4); }
     .card h3 { margin-bottom: 10px; font-size: 1.3rem; }
-    .card p { color: #aeb5d0; }
-    .project {
-      border-color: rgba(91,116,255,.25);
-      background: linear-gradient(135deg,rgba(88,74,255,.10),rgba(35,147,255,.05));
-    }
-    .project-tag { display: inline-block; color: #8db8ff; font-size: .8rem; font-weight: bold; margin-bottom: 12px; }
+    .card p { color: var(--muted); }
+
+    /* Projects */
+    .project { position: relative; overflow: hidden; display: flex; flex-direction: column; }
+    .project::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent); }
+    .project .buttons { margin-top: auto; padding-top: 22px; }
+    .project-tag { display: inline-block; align-self: flex-start; font-size: .75rem; font-weight: 700; letter-spacing: .6px; padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; color: var(--tagc); background: var(--tagbg); }
+    .p-orange { --accent: linear-gradient(90deg,#ff9a3c,#ff5fa2); --tagc: #ffb347; --tagbg: rgba(255,179,71,.12); }
+    .p-violet { --accent: linear-gradient(90deg,#8b7cff,#36a9ff); --tagc: #aaa0ff; --tagbg: rgba(139,124,255,.14); }
+    .p-green { --accent: linear-gradient(90deg,#2ee6a6,#36a9ff); --tagc: #2ee6a6; --tagbg: rgba(46,230,166,.12); }
+    .project.featured { grid-column: 1 / -1; background: linear-gradient(135deg,rgba(46,230,166,.09),rgba(54,169,255,.07),rgba(139,124,255,.09)); border-color: rgba(46,230,166,.3); }
+    .project.featured h3 { font-size: 1.7rem; }
+    .new-badge { display: inline-block; margin-left: 8px; padding: 2px 10px; border-radius: 999px; font-size: .7rem; font-weight: 800; color: #07121a; background: linear-gradient(90deg,var(--orange),var(--pink)); vertical-align: middle; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
+    .chips span { font-size: .78rem; padding: 4px 12px; border-radius: 8px; background: rgba(255,255,255,.07); color: #cfd5ee; }
+    .soon { border-style: dashed; text-align: center; display: flex; flex-direction: column; justify-content: center; }
+
+    /* Quote */
+    .quote { margin-top: 20px; border-left: 4px solid var(--pink); background: linear-gradient(90deg,rgba(255,95,162,.1),transparent); }
+    .quote p { font-style: italic; color: #d9dcf2; font-size: 1.05rem; }
+
+    /* Colour-coded cards */
+    .c1:hover { border-color: rgba(139,124,255,.6); } .c2:hover { border-color: rgba(54,169,255,.6); }
+    .c3:hover { border-color: rgba(46,230,166,.6); } .c4:hover { border-color: rgba(255,95,162,.6); }
+    .icon-box { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 14px; }
+    .c1 .icon-box { background: rgba(139,124,255,.18); } .c2 .icon-box { background: rgba(54,169,255,.18); }
+    .c3 .icon-box { background: rgba(46,230,166,.18); } .c4 .icon-box { background: rgba(255,95,162,.18); }
+
+    /* Contact */
     .contact-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
     .contact-card {
-      display: flex; flex-direction: column; align-items: flex-start; gap: 10px;
-      padding: 26px; border-radius: 18px; border: 1px solid rgba(255,255,255,.08);
-      background: rgba(255,255,255,.035); transition: border-color .2s, transform .2s;
+      display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 26px;
+      border-radius: 20px; border: 1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.04);
+      transition: border-color .2s, transform .2s;
     }
-    .contact-card:hover { border-color: rgba(124,108,255,.4); transform: translateY(-2px); }
+    .contact-card:hover { border-color: rgba(139,124,255,.55); transform: translateY(-4px); }
     .contact-icon { font-size: 1.6rem; }
     .contact-card h3 { font-size: 1.05rem; }
     .contact-card span { color: #9da4c2; font-size: .88rem; word-break: break-all; }
+
     footer { padding: 35px 0; border-top: 1px solid rgba(255,255,255,.08); color: #858da9; text-align: center; font-size: .9rem; }
-    @media (max-width: 700px) {
-      .nav-links { display: none; }
-      .hero { min-height: 75vh; }
+
+    /* Reveal on scroll */
+    .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s, transform .7s; }
+    .reveal.show { opacity: 1; transform: none; }
+
+    @media (max-width: 760px) {
+      .nav-inner { flex-direction: column; padding: 10px 0; gap: 6px; }
+      .nav-links { max-width: 100%; }
+      .hero { min-height: 80vh; padding-top: 50px; }
       h1 { letter-spacing: -2px; }
-      .card-grid { grid-template-columns: 1fr; }
-      .contact-grid { grid-template-columns: 1fr; }
-      section { padding: 65px 0; }
+      .card-grid, .contact-grid { grid-template-columns: 1fr; }
+      .stats { grid-template-columns: repeat(2,1fr); }
+      section { padding: 60px 0; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      * { animation: none !important; transition: none !important; }
+      .reveal { opacity: 1; transform: none; }
     }
   </style>
 </head>
 
 <body>
+  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+
   <nav>
     <div class="container nav-inner">
       <a class="logo" href="#home">Maslah<span>.</span></a>
@@ -127,23 +207,31 @@
   <main>
     <section class="hero" id="home">
       <div class="container hero-content">
-        <div class="badge">Official Website</div>
+        <div class="badge"><i></i> Official Website · Open to freelance work</div>
         <h1>Maslah Aliow<br><span class="gradient-text">Abdow</span></h1>
-        <p>Researcher • Founder • Freelancer • Technology Enthusiast • Innovator</p>
-        <p style="margin-top:16px;">
+        <div class="roles">
+          <span>Researcher</span><span>Founder</span><span>Freelancer</span><span>Technology Enthusiast</span><span>Innovator</span>
+        </div>
+        <p class="lead">
           Building ideas, solving problems, and exploring what technology can make
           possible — across Artificial Intelligence, education, software, and
           entrepreneurship.
         </p>
         <div class="buttons">
-          <a class="button" href="#about">About Me</a>
-          <a class="button secondary" href="#projects">My Projects</a>
+          <a class="button" href="#projects">View My Projects</a>
+          <a class="button secondary" href="#contact">Get In Touch</a>
+        </div>
+        <div class="stats">
+          <div class="stat"><b>3</b><small>Live projects</small></div>
+          <div class="stat"><b>AI</b><small>Focus area</small></div>
+          <div class="stat"><b>PWA</b><small>Web apps</small></div>
+          <div class="stat"><b>KE</b><small>Based in Kenya</small></div>
         </div>
       </div>
     </section>
 
     <section id="about">
-      <div class="container">
+      <div class="container reveal">
         <h2 class="section-title">About Me</h2>
         <p class="section-subtitle">A little about who I am and what I do.</p>
         <div class="card">
@@ -153,16 +241,16 @@
           <br>
           <p>He is also a freelancer, taking on digital and technology-related work while continuing to expand his skills and experience. His approach: research, create, test, solve problems, and improve.</p>
         </div>
-        <div class="card" style="margin-top:18px;">
-          <p style="font-style:italic; color:#cfd3ee;">&laquo;You don't need to know everything to build something meaningful. You need curiosity, initiative, persistence, and the willingness to keep learning.&raquo;</p>
+        <div class="card quote">
+          <p>&laquo;You don't need to know everything to build something meaningful. You need curiosity, initiative, persistence, and the willingness to keep learning.&raquo;</p>
         </div>
       </div>
     </section>
 
     <section id="education">
-      <div class="container">
+      <div class="container reveal">
         <h2 class="section-title">Education</h2>
-        <div class="card">
+        <div class="card" style="margin-top:30px;">
           <p>Maslah studied at <strong>Takaba Boys' Senior School</strong>, a well-regarded secondary school in Kenya.</p>
           <br>
           <p>His academic background has helped shape his interests in science, research, communication, technology, and problem-solving.</p>
@@ -171,11 +259,22 @@
     </section>
 
     <section id="projects">
-      <div class="container">
+      <div class="container reveal">
         <h2 class="section-title">Projects</h2>
         <p class="section-subtitle">Things I am building and exploring.</p>
         <div class="card-grid">
-          <div class="card project">
+
+          <div class="card project featured p-green">
+            <div class="project-tag">BOOKS • DIGITAL PRODUCTS • WEB APP</div>
+            <h3>Maslah Library <span class="new-badge">NEW</span></h3>
+            <p>A growing online shelf of practical guides, prompts and workbooks written to help people work, earn and learn — and to be used the same day. Visitors can browse the library, search by title or topic, filter by category, and order a PDF edition in one tap through WhatsApp or email.</p>
+            <div class="chips"><span>📚 Practical guides</span><span>🔎 Search &amp; filter</span><span>📲 Order via WhatsApp</span><span>✉️ Order via email</span><span>📄 PDF editions</span></div>
+            <div class="buttons">
+              <a class="button" href="https://maslah-shelf.maslahaliow9.workers.dev/" target="_blank" rel="noopener">Visit Maslah Library</a>
+            </div>
+          </div>
+
+          <div class="card project p-orange">
             <div class="project-tag">WEB APP • PWA</div>
             <h3>Duka Debt</h3>
             <p>A web-based debt tracking application designed to help users keep track of people who owe them money and the amounts involved.</p>
@@ -183,7 +282,8 @@
               <a class="button" href="https://duka-debt.maslahaliow9.workers.dev/" target="_blank" rel="noopener">Visit Duka Debt</a>
             </div>
           </div>
-          <div class="card project">
+
+          <div class="card project p-violet">
             <div class="project-tag">AI • RAG • PWA</div>
             <h3>Maslah Academy AI</h3>
             <p>An AI-powered study assistant that answers KCSE English literature setbook questions using evidence retrieved directly from the actual texts, including The Samaritan and Fathers of Nations.</p>
@@ -191,8 +291,9 @@
               <a class="button" href="https://maslah-academy.maslahaliow9.workers.dev/" target="_blank" rel="noopener">Visit Maslah Academy AI</a>
             </div>
           </div>
-          <div class="card">
-            <h3>More Projects Coming</h3>
+
+          <div class="card soon" style="grid-column:1 / -1;">
+            <h3>🚀 More Projects Coming</h3>
             <p>This space will feature future technology, software and digital projects created by Maslah Aliow Abdow.</p>
           </div>
         </div>
@@ -200,61 +301,30 @@
     </section>
 
     <section id="research">
-      <div class="container">
+      <div class="container reveal">
         <h2 class="section-title">Research</h2>
         <p class="section-subtitle">Independent Researcher — investigating questions, exploring unfamiliar subjects, and developing ideas from what I discover.</p>
         <div class="card-grid">
-          <div class="card"><h3>🤖 Artificial Intelligence</h3><p>Exploring how AI can be applied to real-world education and business problems.</p></div>
-          <div class="card"><h3>🎓 Educational Technology</h3><p>Researching how digital tools and AI can improve the learning experience.</p></div>
-          <div class="card"><h3>🌍 Technology & Society</h3><p>Investigating how emerging technologies can be adapted to solve problems across Africa.</p></div>
-          <div class="card"><h3>🚀 Space & Emerging Tech</h3><p>Following developments in space exploration and other frontier technologies.</p></div>
+          <div class="card c1"><div class="icon-box">🤖</div><h3>Artificial Intelligence</h3><p>Exploring how AI can be applied to real-world education and business problems.</p></div>
+          <div class="card c2"><div class="icon-box">🎓</div><h3>Educational Technology</h3><p>Researching how digital tools and AI can improve the learning experience.</p></div>
+          <div class="card c3"><div class="icon-box">🌍</div><h3>Technology &amp; Society</h3><p>Investigating how emerging technologies can be adapted to solve problems across Africa.</p></div>
+          <div class="card c4"><div class="icon-box">🚀</div><h3>Space &amp; Emerging Tech</h3><p>Following developments in space exploration and other frontier technologies.</p></div>
         </div>
       </div>
     </section>
 
     <section id="interests">
-      <div class="container">
+      <div class="container reveal">
         <h2 class="section-title">Interests</h2>
         <p class="section-subtitle">Areas I enjoy learning about and exploring.</p>
         <div class="card-grid">
-          <div class="card"><h3>💻 Technology</h3><p>Web development, software, digital tools and emerging technologies.</p></div>
-          <div class="card"><h3>🎓 Education</h3><p>Learning, academic development and helping make information easier to understand.</p></div>
-          <div class="card"><h3>🚀 Entrepreneurship</h3><p>Building useful ideas and exploring ways technology can solve real-world problems.</p></div>
+          <div class="card c2"><div class="icon-box">💻</div><h3>Technology</h3><p>Web development, software, digital tools and emerging technologies.</p></div>
+          <div class="card c3"><div class="icon-box">🎓</div><h3>Education</h3><p>Learning, academic development and helping make information easier to understand.</p></div>
+          <div class="card c4" style="grid-column:1 / -1;"><div class="icon-box">🚀</div><h3>Entrepreneurship</h3><p>Building useful ideas and exploring ways technology can solve real-world problems.</p></div>
         </div>
       </div>
     </section>
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Email, LinkedIn, Upwork, and Resume — all in one place.</p>
-        <div class="contact-grid">
-          <a class="contact-card" href="mailto:maslahaliow9@gmail.com">
-            <span class="contact-icon">✉️</span>
-            <h3>Email</h3>
-            <span>maslahaliow9@gmail.com</span>
-          </a>
-          <a class="contact-card" href="https://www.linkedin.com/in/maslah-aliow-abdow-7258a2392" target="_blank" rel="noopener">
-            <span class="contact-icon">💼</span>
-            <h3>LinkedIn</h3>
-            <span>Maslah Aliow Abdow</span>
-          </a>
-          <a class="contact-card" href="https://www.upwork.com/freelancers/~0198f79a68316299e5" target="_blank" rel="noopener">
-            <span class="contact-icon">🟢</span>
-            <h3>Upwork</h3>
-            <span>Hire me on Upwork</span>
-          </a>
-          <a class="contact-card" href="data:application/pdf;base64,JVBERi0xLjQKJZOMi54gUmVwb3J0TGFiIEdlbmVyYXRlZCBQREYgZG9jdW1lbnQgKG9wZW5zb3VyY2UpCjEgMCBvYmoKPDwKL0YxIDIgMCBSIC9GMiAzIDAgUiAvRjMgNCAwIFIKPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EgL0VuY29kaW5nIC9XaW5BbnNpRW5jb2RpbmcgL05hbWUgL0YxIC9TdWJ0eXBlIC9UeXBlMSAvVHlwZSAvRm9udAo+PgplbmRvYmoKMyAwIG9iago8PAovQmFzZUZvbnQgL0hlbHZldGljYS1Cb2xkIC9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nIC9OYW1lIC9GMiAvU3VidHlwZSAvVHlwZTEgL1R5cGUgL0ZvbnQKPj4KZW5kb2JqCjQgMCBvYmoKPDwKL0Jhc2VGb250IC9IZWx2ZXRpY2EtT2JsaXF1ZSAvRW5jb2RpbmcgL1dpbkFuc2lFbmNvZGluZyAvTmFtZSAvRjMgL1N1YnR5cGUgL1R5cGUxIC9UeXBlIC9Gb250Cj4+CmVuZG9iago1IDAgb2JqCjw8Ci9Db250ZW50cyAxMCAwIFIgL01lZGlhQm94IFsgMCAwIDYxMiA3OTIgXSAvUGFyZW50IDkgMCBSIC9SZXNvdXJjZXMgPDwKL0ZvbnQgMSAwIFIgL1Byb2NTZXQgWyAvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJIF0KPj4gL1JvdGF0ZSAwIC9UcmFucyA8PAoKPj4gCiAgL1R5cGUgL1BhZ2UKPj4KZW5kb2JqCjYgMCBvYmoKPDwKL0NvbnRlbnRzIDExIDAgUiAvTWVkaWFCb3ggWyAwIDAgNjEyIDc5MiBdIC9QYXJlbnQgOSAwIFIgL1Jlc291cmNlcyA8PAovRm9udCAxIDAgUiAvUHJvY1NldCBbIC9QREYgL1RleHQgL0ltYWdlQiAvSW1hZ2VDIC9JbWFnZUkgXQo+PiAvUm90YXRlIDAgL1RyYW5zIDw8Cgo+PiAKICAvVHlwZSAvUGFnZQo+PgplbmRvYmoKNyAwIG9iago8PAovUGFnZU1vZGUgL1VzZU5vbmUgL1BhZ2VzIDkgMCBSIC9UeXBlIC9DYXRhbG9nCj4+CmVuZG9iago4IDAgb2JqCjw8Ci9BdXRob3IgKFwoYW5vbnltb3VzXCkpIC9DcmVhdGlvbkRhdGUgKEQ6MjAyNjA4MjMwNzU0MDgrMDAnMDAnKSAvQ3JlYXRvciAoXCh1bnNwZWNpZmllZFwpKSAvS2V5d29yZHMgKCkgL01vZERhdGUgKEQ6MjAyNjA4MjMwNzU0MDgrMDAnMDAnKSAvUHJvZHVjZXIgKFJlcG9ydExhYiBQREYgTGlicmFyeSAtIFwob3BlbnNvdXJjZVwpKSAKICAvU3ViamVjdCAoXCh1bnNwZWNpZmllZFwpKSAvVGl0bGUgKFwoYW5vbnltb3VzXCkpIC9UcmFwcGVkIC9GYWxzZQo+PgplbmRvYmoKOSAwIG9iago8PAovQ291bnQgMiAvS2lkcyBbIDUgMCBSIDYgMCBSIF0gL1R5cGUgL1BhZ2VzCj4+CmVuZG9iagoxMCAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAxOTY2Cj4+CnN0cmVhbQpHYXVgVD5CQUxYJ1JuQjMzMDJgNT91OXVSZSdgb0ZbJXA6MEQwQlJjNzJRJj9LTEBAL1FDXCRNNGQnVWUiUUNiXFZwLG9jKWJKcXRKKjZVYmlMYiRRVUgtLWUmSDkzMV8lLlpZSjcjQSwrUkRIUzRGOTNeZHBMW1k4ZGgpPUdublRvSCxVPGxIRDpxN1dgTyxIIWteRkRIRUBZSG9GKlxNVEJtWkZFVU5sL109N1YmX3RkIz5mXkYzPDo7OyIicnU2WEsrb0wuOXBCQ1RqTzdeLTFPXUQ4aHA5ND9gPHBLKkhQZkdgPy1XVmleb2RaaScnK3JWL0lfWzhXIk0tcT9DVjczVSw4YTZHOEs/IkVwKUFwNDY5JyhPQFMzKylwb3IzdF02Y1NuT0ppRVcxQFJhcGFGTmBQJFFNODZhYWUxaE41cWNJbz1nMD5BbD85bzpLNEQlSjNFYyxMViFQLmtDaUFMMElNYUEpPCI4bGc0KWxCWlV1TSszQT1aZCMxSj5CcnI3NW1bIklbI0BALDk1bVBTc0sjOThJJzJtJ0pwbFIuXDk6SnI5Tj1jOylGRFFnWGhASU5vMlZbcFxLMmBJO0RoYDo3UHJxPlBUUEMocFtVVDs1Tj9UZE5PYzo9XkM5NEZ0c2AjKD1qQWpVTXU/J2YtSFclY09mRk5UOCVEamtKX0NXNW9TI1VnXWQwYTM8SE1sRy8iImliQiQxY2ovWmBYYUFXSmhvXDk6N1xOakErW2Y4WydFZCc+KWMiSCQvbDY6QU5WOGpyRlw5ZCJMckcsaWErL0ppWTBlKDc+SlRLMT5jP1RFaCNPUlNgdDgjXSlPQ11fJk0+UCJNc1ViSl1tQzBLPmAvSFIkVCgxMS9TcTUlI1NbQEJJVUt0Q0pycHE6QHByb0YrcCpEbCU3b01kIVQsRWZmOFhvbzxsUm1OYztjblFXMGAsRGJPInApKXNSXEJeJyZcYStRa2xJLXBRWUA1KT9KQkYhR1RjJThsMklyNDBeOC8qQCk+KzJXbiZPRWBgWGhbQDxhJl05OFdjTFYuZVgwU20sYzFqYDFvJjRbM0QoLXRXaDMrcEsrciEzXSRXWEFBcktbW0cwLmE5R3ReNENCTEdbUmg4bD5NN01NLGNfLnJwKk9aISdkbGg/MCkmK2ZgOFNsWUdBcEBAUFhcK15QTyJPQEYvI09VKktbImhcX2ZyUzh1WkNZOU1nXkUnPCsyP0smJ0FVbVAtPm1RM1wkOzZVKWdFOEZhKDkhQy5tX1NITl5fcik8JCFtMDZccThtVCl0MClESFdSOS5WJD5LbVorVHVWYVNrWD8sXFdqSUJEWmltP0huSmgrXVIiZyRUInFlZjA7RWxeOkYhVzg/KGNLTD9fKlFpY2pvPHNzbm5ucEAqNSI9bE4yOU4pYEYvc0RWcm8lciRwNi0nZT1qIWZDQlBzTVl1UC1IT0NAOTVJaC5pP1R0OF47WyZuVCxTZTFab1JDbFhaNygxIlVzWXAwbjplPm5tZEhLMS9hQSJfI0xrZ0VRUUlGcSxrLVBAOEdQWTgvaT1AbDoidVJ0ZjtOa2JoTlI8czYoaiVgY0YpSkdFc2o5KE0nZWxbOmNtamY+S3M8VmFocEZZPy9KaCM2UUE0NlVmTz9aXVlQKFkoR1VbJmkqI1VWMzRBWDEpWXBFMSltSF0zJ05bT2o8M15XcUcoXVMlXiJ0OzleI1onWkgxKThVOE5oNDtDTlsmKGEsLyorLGZnQlxjR0tcayFYRm9hZihVa0g6TV82bGJaXC0nNE07YjlOYCRPZyYkNCtjIlQiPnE2M1Q0VSwjQzFbUDxdQ0pbQG8uWylTOClEPjVdblwwKHI7bC1DJ0JcUDwnOGA9cHU5K2MmNEt1VVdta1M4cWdhYklQPSZcPTRXY2tKVyMhZ1NuUVBFYUxgRTZhWGpCTjVHKytlKU5aWm8pRVc7L3FLPUU+LUkpPmlHUiI+IXRvSVtnY2IjI3E3Uz5FXmFcISQ1VmEoRVVjZk1ILictUCc2TFlMXGtTWio5RCUiXTswOTpoYm40PkZOJHE1SSlePD9bU0ouZzNKU3RHYy5CPVJnLz0jSiktUEw1dWJGXTklXmksZ0NtZ0JCVmNlJS0yXVtrQz5oVTs2QERJbFM/a1YmZzJHT0BjV1MzZ1I6UGwoRSlLNjo4VV84IS1DKS5bNFxqK3U/Yy8yNFhRaFdKUlA/clZLSlJUSzUoVmVfRl8wRjFEIlhfKE9DS1pxRltNXDwwTy9RLm0naHBnI0ROYktHIlUzQEpNXS9zUiNGbVs4czlmOFtrQWVJYnQpVFlHcnFUM1JHL2BjZU5wOlpkP05WWDhkJVVIcW9PXkxpRGBrWi0ncG48aG81cV8iWCZKYChFJShiNnFncU5nQF1hL3VCRWVudSNlUGtmWktAMkhDOWJMOG9LW2BbaSZ0WCpQQ2k0K0wrQDZdL0BpMjxLSGgoOVdrLyxmUVozMnNBU1d0OyVGI1RDXGg5cTs/bG5tISNWaT9fR0tDLmQsRzJHIylCYS4+JS5fMCxOREhJZktDYm5MKCc/L1JYS01hPzxbXGsjc00mZzJIPWNbbUU+bDpbUl9WK3MrcmtTMX4+ZW5kc3RyZWFtCmVuZG9iagoxMSAwIG9iago8PAovRmlsdGVyIFsgL0FTQ0lJODVEZWNvZGUgL0ZsYXRlRGVjb2RlIF0gL0xlbmd0aCAyODUKPj4Kc3RyZWFtCkdhcicjZDdWOzEnU2MpUidgWSJVJlkjbFhdI3RSJydSQ3UsXzk0QWspcT9kdVAlc09TNF5EJ2AzS1RIY0teW3JmYUxVQUtbbHB0RUdoYnFfImF0dFI2aWwtJzhTP1hLcnFuPTRXM0IsNk8pMy8yNjdRLUBbaCxVUVg9RDI7VVdSJihHZzctUXM3Z0JuVCVXQ3E+dHNDbHFQQSlgSElvTmBJX0NNY0s3OTIwY1dqK1NyX0wobig3J0JKLzdwM0thbGJYaW8kX14rKiQhb08rc1FcZ2krIiRRYGBwOnNpXUUpYEBkS1dOciMla1AsODM0Jk5JMiRiaDhZY3UvPllhayZfRSdyZExoNmY9UCZaV1AjdTZccCdvL1U+MFJ+PmVuZHN0cmVhbQplbmRvYmoKeHJlZgowIDEyCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDA2MSAwMDAwMCBuIAowMDAwMDAwMTEyIDAwMDAwIG4gCjAwMDAwMDAyMTkgMDAwMDAgbiAKMDAwMDAwMDMzMSAwMDAwMCBuIAowMDAwMDAwNDQ2IDAwMDAwIG4gCjAwMDAwMDA2NDAgMDAwMDAgbiAKMDAwMDAwMDgzNCAwMDAwMCBuIAowMDAwMDAwOTAyIDAwMDAwIG4gCjAwMDAwMDExODIgMDAwMDAgbiAKMDAwMDAwMTI0NyAwMDAwMCBuIAowMDAwMDAzMzA1IDAwMDAwIG4gCnRyYWlsZXIKPDwKL0lEIApbPGJhNGExMTk1MzBhODVmNDE5N2RkOGE3NTBkZGI0MGYyPjxiYTRhMTE5NTMwYTg1ZjQxOTdkZDhhNzUwZGRiNDBmMj5dCiUgUmVwb3J0TGFiIGdlbmVyYXRlZCBQREYgZG9jdW1lbnQgLS0gZGlnZXN0IChvcGVuc291cmNlKQoKL0luZm8gOCAwIFIKL1Jvb3QgNyAwIFIKL1NpemUgMTIKPj4Kc3RhcnR4cmVmCjM2ODEKJSVFT0YK" download="Maslah_Aliow_Abdow_Resume.pdf">
-            <span class="contact-icon">📄</span>
-            <h3>Resume</h3>
-            <span>Download PDF</span>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
 
-  <footer>
-    <div class="container">© 2026 Maslah Aliow Abdow. All rights reserved.</div>
-  </footer>
-</body>
-</html>
+    <section id="contact">
+      <div class="container reveal">
+        <h2
