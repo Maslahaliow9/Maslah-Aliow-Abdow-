@@ -1,331 +1,218 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Maslah Aliow Abdow | Researcher, Founder & Freelancer</title>
-  <meta name="description" content="Official website of Maslah Aliow Abdow — a Kenyan researcher, founder, freelancer, and technology enthusiast working in AI, education, and digital innovation.">
-  <meta name="author" content="Maslah Aliow Abdow">
-  <meta name="google-site-verification" content="fReeiTTFdpUen-p-BLtLc6kfgw5XxgVhv6-btDLi89Y" />
-  <link rel="canonical" href="https://maslahaliow.pages.dev/">
-  <meta property="og:title" content="Maslah Aliow Abdow | Researcher, Founder & Freelancer">
-  <meta property="og:description" content="Official website of Maslah Aliow Abdow — researcher, founder, freelancer, and technology enthusiast.">
-  <meta property="og:type" content="profile">
-  <meta property="og:url" content="https://maslahaliow.pages.dev/">
-  <meta name="theme-color" content="#070a18">
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Maslah Aliow Abdow",
-    "url": "https://maslahaliow.pages.dev/",
-    "description": "Kenyan researcher, founder, freelancer, and technology enthusiast working in AI, education, digital innovation and entrepreneurship.",
-    "jobTitle": "Researcher, Founder & Freelancer",
-    "knowsAbout": ["Artificial Intelligence","Software Development","Web Development","Educational Technology","Research","Entrepreneurship","Digital Innovation"],
-    "email": "mailto:maslahaliow9@gmail.com",
-    "sameAs": [
-      "https://www.linkedin.com/in/maslah-aliow-abdow-7258a2392",
-      "https://www.upwork.com/freelancers/~0198f79a68316299e5"
-    ]
-  }
-  </script>
-
-  <style>
-    :root {
-      --bg: #070a18;
-      --violet: #8b7cff;
-      --blue: #36a9ff;
-      --pink: #ff5fa2;
-      --orange: #ffb347;
-      --green: #2ee6a6;
-      --text: #f4f6ff;
-      --muted: #aab1cf;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
-      background: var(--bg); color: var(--text); line-height: 1.7; overflow-x: hidden;
-    }
-    a { color: inherit; text-decoration: none; }
-    .container { width: min(1120px, 92%); margin: auto; }
-
-    /* Floating colour orbs */
-    .orb { position: fixed; border-radius: 50%; filter: blur(110px); opacity: .32; z-index: 0; pointer-events: none; }
-    .orb.o1 { width: 460px; height: 460px; background: var(--violet); top: -120px; right: -120px; animation: float 14s ease-in-out infinite; }
-    .orb.o2 { width: 380px; height: 380px; background: var(--blue); bottom: -100px; left: -100px; animation: float 17s ease-in-out infinite reverse; }
-    .orb.o3 { width: 300px; height: 300px; background: var(--pink); top: 45%; left: 55%; opacity: .14; animation: float 20s ease-in-out infinite; }
-    @keyframes float { 0%,100% { transform: translate(0,0); } 50% { transform: translate(30px,-40px); } }
-    nav, main, footer { position: relative; z-index: 1; }
-
-    /* Nav */
-    nav {
-      position: sticky; top: 0; z-index: 100; backdrop-filter: blur(16px);
-      background: rgba(7,10,24,.75); border-bottom: 1px solid rgba(255,255,255,.08);
-    }
-    .nav-inner { min-height: 66px; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
-    .logo { font-size: 1.2rem; font-weight: 800; letter-spacing: .5px; }
-    .logo span { background: linear-gradient(90deg,var(--pink),var(--orange)); -webkit-background-clip: text; background-clip: text; color: transparent; }
-    .nav-links { display: flex; gap: 6px; font-size: .9rem; overflow-x: auto; scrollbar-width: none; }
-    .nav-links::-webkit-scrollbar { display: none; }
-    .nav-links a { color: var(--muted); padding: 6px 12px; border-radius: 999px; white-space: nowrap; transition: .2s; }
-    .nav-links a:hover { color: #fff; background: rgba(139,124,255,.18); }
-
-    /* Hero */
-    .hero { min-height: 90vh; display: flex; align-items: center; padding: 80px 0 60px; }
-    .hero-content { max-width: 860px; }
-    .badge {
-      display: inline-flex; align-items: center; gap: 8px; padding: 8px 16px;
-      border: 1px solid rgba(46,230,166,.35); border-radius: 999px;
-      background: rgba(46,230,166,.08); color: var(--green); font-size: .85rem; margin-bottom: 24px;
-    }
-    .badge i { width: 8px; height: 8px; border-radius: 50%; background: var(--green); box-shadow: 0 0 0 0 rgba(46,230,166,.6); animation: pulse 2s infinite; }
-    @keyframes pulse { 70% { box-shadow: 0 0 0 10px rgba(46,230,166,0); } 100% { box-shadow: 0 0 0 0 rgba(46,230,166,0); } }
-    h1 { font-size: clamp(3rem,10vw,6.5rem); line-height: .98; letter-spacing: -4px; margin-bottom: 24px; }
-    .gradient-text {
-      background: linear-gradient(90deg,#8b7cff,#36a9ff,#2ee6a6,#ffb347,#ff5fa2,#8b7cff);
-      background-size: 300% 100%;
-      -webkit-background-clip: text; background-clip: text;
-      -webkit-text-fill-color: transparent; color: transparent;
-      animation: shift 8s linear infinite, glow 8s ease-in-out infinite;
-    }
-    @keyframes shift { to { background-position: 300% 0; } }
-    @keyframes glow {
-      0%, 100% { filter: drop-shadow(0 0 12px rgba(139,124,255,.75)) drop-shadow(0 0 34px rgba(139,124,255,.45)); }
-      25% { filter: drop-shadow(0 0 12px rgba(54,169,255,.75)) drop-shadow(0 0 34px rgba(54,169,255,.45)); }
-      50% { filter: drop-shadow(0 0 12px rgba(46,230,166,.75)) drop-shadow(0 0 34px rgba(46,230,166,.45)); }
-      75% { filter: drop-shadow(0 0 12px rgba(255,95,162,.75)) drop-shadow(0 0 34px rgba(255,95,162,.45)); }
-    }
-    .roles { display: flex; flex-wrap: wrap; gap: 10px; margin-bottom: 20px; }
-    .roles span { padding: 6px 14px; border-radius: 999px; font-size: .88rem; font-weight: 600; border: 1px solid; }
-    .roles span:nth-child(1) { color: var(--violet); border-color: rgba(139,124,255,.4); background: rgba(139,124,255,.1); }
-    .roles span:nth-child(2) { color: var(--orange); border-color: rgba(255,179,71,.4); background: rgba(255,179,71,.1); }
-    .roles span:nth-child(3) { color: var(--green); border-color: rgba(46,230,166,.4); background: rgba(46,230,166,.1); }
-    .roles span:nth-child(4) { color: var(--blue); border-color: rgba(54,169,255,.4); background: rgba(54,169,255,.1); }
-    .roles span:nth-child(5) { color: var(--pink); border-color: rgba(255,95,162,.4); background: rgba(255,95,162,.1); }
-    .hero p.lead { color: var(--muted); font-size: 1.12rem; max-width: 680px; }
-    .buttons { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 30px; }
-    .button {
-      display: inline-block; padding: 13px 24px; border-radius: 12px; font-weight: 700;
-      background: linear-gradient(135deg,#7566ff,#318cff); box-shadow: 0 10px 35px rgba(76,78,255,.3);
-      transition: transform .2s, box-shadow .2s;
-    }
-    .button:hover { transform: translateY(-2px); box-shadow: 0 14px 40px rgba(76,78,255,.45); }
-    .button.secondary { background: transparent; border: 1px solid rgba(255,255,255,.18); box-shadow: none; }
-    .button.secondary:hover { border-color: var(--violet); background: rgba(139,124,255,.1); }
-
-
-    /* Sections */
-    section { padding: 90px 0; }
-    .section-title { font-size: 2.3rem; margin-bottom: 12px; letter-spacing: -1px; }
-    .section-title::after { content: ""; display: block; width: 60px; height: 4px; border-radius: 4px; margin-top: 10px; background: linear-gradient(90deg,var(--violet),var(--pink)); }
-    .section-subtitle { color: #9da4c2; margin-bottom: 38px; }
-    .card-grid { display: grid; grid-template-columns: repeat(2,1fr); gap: 20px; }
-    .card {
-      padding: 28px; border-radius: 20px; border: 1px solid rgba(255,255,255,.09);
-      background: rgba(255,255,255,.04); transition: transform .25s, border-color .25s;
-    }
-    .card:hover { transform: translateY(-4px); border-color: rgba(139,124,255,.4); }
-    .card h3 { margin-bottom: 10px; font-size: 1.3rem; }
-    .card p { color: var(--muted); }
-
-    /* Projects */
-    .project { position: relative; overflow: hidden; display: flex; flex-direction: column; }
-    .project::before { content: ""; position: absolute; top: 0; left: 0; right: 0; height: 4px; background: var(--accent); }
-    .project .buttons { margin-top: auto; padding-top: 22px; }
-    .project-tag { display: inline-block; align-self: flex-start; font-size: .75rem; font-weight: 700; letter-spacing: .6px; padding: 4px 12px; border-radius: 999px; margin-bottom: 14px; color: var(--tagc); background: var(--tagbg); }
-    .p-orange { --accent: linear-gradient(90deg,#ff9a3c,#ff5fa2); --tagc: #ffb347; --tagbg: rgba(255,179,71,.12); }
-    .p-violet { --accent: linear-gradient(90deg,#8b7cff,#36a9ff); --tagc: #aaa0ff; --tagbg: rgba(139,124,255,.14); }
-    .p-green { --accent: linear-gradient(90deg,#2ee6a6,#36a9ff); --tagc: #2ee6a6; --tagbg: rgba(46,230,166,.12); }
-    .project.featured { grid-column: 1 / -1; background: linear-gradient(135deg,rgba(46,230,166,.09),rgba(54,169,255,.07),rgba(139,124,255,.09)); border-color: rgba(46,230,166,.3); }
-    .project.featured h3 { font-size: 1.7rem; }
-    .new-badge { display: inline-block; margin-left: 8px; padding: 2px 10px; border-radius: 999px; font-size: .7rem; font-weight: 800; color: #07121a; background: linear-gradient(90deg,var(--orange),var(--pink)); vertical-align: middle; }
-    .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 16px; }
-    .chips span { font-size: .78rem; padding: 4px 12px; border-radius: 8px; background: rgba(255,255,255,.07); color: #cfd5ee; }
-    .soon { border-style: dashed; text-align: center; display: flex; flex-direction: column; justify-content: center; }
-
-    /* Quote */
-    .quote { margin-top: 20px; border-left: 4px solid var(--pink); background: linear-gradient(90deg,rgba(255,95,162,.1),transparent); }
-    .quote p { font-style: italic; color: #d9dcf2; font-size: 1.05rem; }
-    .quote small { display: block; margin-top: 8px; color: #9da4c2; font-size: .85rem; }
-    .quote.gentle { border-left-color: var(--green); background: linear-gradient(90deg,rgba(46,230,166,.1),transparent); }
-
-    /* Colour-coded cards */
-    .c1:hover { border-color: rgba(139,124,255,.6); } .c2:hover { border-color: rgba(54,169,255,.6); }
-    .c3:hover { border-color: rgba(46,230,166,.6); } .c4:hover { border-color: rgba(255,95,162,.6); }
-    .icon-box { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; font-size: 1.5rem; margin-bottom: 14px; }
-    .c1 .icon-box { background: rgba(139,124,255,.18); } .c2 .icon-box { background: rgba(54,169,255,.18); }
-    .c3 .icon-box { background: rgba(46,230,166,.18); } .c4 .icon-box { background: rgba(255,95,162,.18); }
-
-    /* Contact */
-    .contact-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 18px; }
-    .contact-card {
-      display: flex; flex-direction: column; align-items: flex-start; gap: 10px; padding: 26px;
-      border-radius: 20px; border: 1px solid rgba(255,255,255,.09); background: rgba(255,255,255,.04);
-      transition: border-color .2s, transform .2s;
-    }
-    .contact-card:hover { border-color: rgba(139,124,255,.55); transform: translateY(-4px); }
-    .contact-icon { font-size: 1.6rem; }
-    .contact-card h3 { font-size: 1.05rem; }
-    .contact-card span { color: #9da4c2; font-size: .88rem; word-break: break-all; }
-
-    footer { padding: 35px 0; border-top: 1px solid rgba(255,255,255,.08); color: #858da9; text-align: center; font-size: .9rem; }
-
-
-    @media (max-width: 760px) {
-      .nav-inner { flex-direction: column; padding: 10px 0; gap: 6px; }
-      .nav-links { max-width: 100%; }
-      .hero { min-height: 80vh; padding-top: 50px; }
-      h1 { letter-spacing: -2px; }
-      .card-grid, .contact-grid { grid-template-columns: 1fr; }
-      section { padding: 60px 0; }
-    }
-    @media (prefers-reduced-motion: reduce) {
-      * { animation: none !important; transition: none !important; }
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Maslah Aliow Abdow | Researcher, Founder & Freelancer</title>
+<meta name="description" content="Official website of Maslah Aliow Abdow, a Kenyan researcher, founder and freelancer building useful digital products.">
+<meta name="author" content="Maslah Aliow Abdow">
+<meta name="google-site-verification" content="fReeiTTFdpUen-p-BLtLc6kfgw5XxgVhv6-btDLi89Y" />
+<link rel="canonical" href="https://maslahaliow.pages.dev/">
+<meta property="og:title" content="Maslah Aliow Abdow | Researcher, Founder & Freelancer">
+<meta property="og:description" content="Official website of Maslah Aliow Abdow, researcher, founder and freelancer.">
+<meta property="og:type" content="profile">
+<meta property="og:url" content="https://maslahaliow.pages.dev/">
+<meta name="theme-color" content="#070a18">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Person","name":"Maslah Aliow Abdow","url":"https://maslahaliow.pages.dev/","jobTitle":"Researcher, Founder & Freelancer","email":"mailto:maslahaliow9@gmail.com","telephone":"+254790493563","sameAs":["https://www.linkedin.com/in/maslah-aliow-abdow-7258a2392","https://www.upwork.com/freelancers/~0198f79a68316299e5"]}
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;800&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#070a18;--ink:#f4f6ff;--muted:#aab1cf;--line:rgba(255,255,255,.1);--panel:rgba(255,255,255,.045);--violet:#8b7cff;--blue:#36a9ff;--green:#2ee6a6;--orange:#ffb347;--pink:#ff5fa2}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:"Inter",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;background:var(--bg);color:var(--ink);line-height:1.7;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(700px 520px at 95% -5%,rgba(139,124,255,.34),transparent 65%),radial-gradient(640px 480px at -5% 100%,rgba(54,169,255,.28),transparent 65%),radial-gradient(520px 420px at 60% 50%,rgba(255,95,162,.10),transparent 65%)}
+a{color:inherit;text-decoration:none}
+a:focus-visible{outline:2px solid var(--blue);outline-offset:3px}
+.container{width:min(1080px,90%);margin:auto}
+nav{position:sticky;top:0;z-index:50;background:rgba(7,10,24,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}
+.nav-inner{min-height:62px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-weight:800;letter-spacing:.05em;text-transform:uppercase;font-size:.95rem}
+.nav-links{display:flex;gap:4px;font-size:.88rem;overflow-x:auto;scrollbar-width:none}
+.nav-links::-webkit-scrollbar{display:none}
+.nav-links a{color:var(--muted);padding:6px 11px;border-radius:999px;white-space:nowrap;transition:.2s}
+.nav-links a:hover{color:#fff;background:rgba(139,124,255,.18)}
+.hero{padding:clamp(56px,10vw,120px) 0 clamp(48px,8vw,90px);border-bottom:1px solid var(--line)}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.85rem;color:var(--green);border:1px solid rgba(46,230,166,.35);background:rgba(46,230,166,.08);padding:6px 14px;border-radius:999px;margin-bottom:26px}
+.status i{width:8px;height:8px;border-radius:50%;background:var(--green)}
+h1{font-weight:800;font-size:clamp(3rem,13.5vw,10rem);line-height:.95;letter-spacing:-.02em;text-transform:uppercase;margin-bottom:30px}
+h1 span{display:block}
+.light{background:linear-gradient(90deg,#8b7cff,#36a9ff,#2ee6a6,#ffb347,#ff5fa2,#8b7cff);background-size:300% 100%;-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent;animation:shift 9s linear infinite}
+@keyframes shift{to{background-position:300% 0}}
+.roles{font-size:1.05rem;font-weight:500;margin-bottom:16px}
+.lead{color:var(--muted);font-size:1.1rem;max-width:620px}
+.buttons{display:flex;flex-wrap:wrap;gap:12px;margin-top:32px}
+.button{display:inline-block;padding:13px 24px;border-radius:10px;font-weight:600;font-size:.95rem;color:#fff;background:linear-gradient(135deg,#7566ff,#318cff);box-shadow:0 10px 30px rgba(76,78,255,.3);transition:transform .2s,box-shadow .2s}
+.button:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(76,78,255,.45)}
+.button.secondary{background:transparent;border:1px solid rgba(255,255,255,.2);box-shadow:none}
+.button.secondary:hover{border-color:var(--violet);background:rgba(139,124,255,.1)}
+section{padding:clamp(56px,8vw,96px) 0;border-bottom:1px solid var(--line)}
+.section-title{font-size:clamp(1.8rem,4vw,2.4rem);letter-spacing:-.03em;margin-bottom:8px}
+.section-title::after{content:"";display:block;width:56px;height:4px;border-radius:4px;margin-top:10px;background:linear-gradient(90deg,var(--violet),var(--pink))}
+.section-subtitle{color:var(--muted);margin-bottom:36px;max-width:640px}
+.card-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}
+.card{padding:28px;border-radius:16px;border:1px solid var(--line);background:var(--panel);transition:border-color .25s,transform .25s}
+.card:hover{border-color:rgba(139,124,255,.45)}
+.card h3{font-size:1.2rem;margin-bottom:8px;letter-spacing:-.01em}
+.card p{color:var(--muted)}
+.card p+p{margin-top:14px}
+.project{display:flex;flex-direction:column;position:relative;overflow:hidden}
+.project::before{content:"";position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--violet),var(--blue))}
+.project:nth-of-type(2)::before{background:linear-gradient(90deg,var(--orange),var(--pink))}
+.project .buttons{margin-top:auto;padding-top:22px}
+.tag{align-self:flex-start;font-size:.75rem;font-weight:600;padding:3px 12px;border-radius:999px;margin-bottom:14px;color:#c9c3ff;background:rgba(139,124,255,.15)}
+.featured{grid-column:1/-1;background:linear-gradient(135deg,rgba(46,230,166,.08),rgba(54,169,255,.06),rgba(139,124,255,.08));border-color:rgba(46,230,166,.28)}
+.featured::before{background:linear-gradient(90deg,var(--green),var(--blue))}
+.featured h3{font-size:1.6rem}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.chips span{font-size:.8rem;padding:4px 12px;border-radius:8px;background:rgba(255,255,255,.07);color:#cfd5ee}
+.soon{grid-column:1/-1;border-style:dashed;text-align:center}
+.quote{margin-top:18px;border-left:3px solid var(--pink);background:linear-gradient(90deg,rgba(255,95,162,.1),transparent)}
+.quote p{font-style:italic;color:#e3e6fa}
+.quote cite{display:block;margin-top:6px;font-size:.85rem;color:var(--muted);font-style:normal}
+.contact-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.contact-card{display:flex;align-items:center;gap:18px;padding:20px 24px;border-radius:16px;border:1px solid var(--line);background:var(--panel);transition:border-color .2s,transform .2s,background .2s}
+.contact-card:hover{border-color:rgba(139,124,255,.6);background:rgba(139,124,255,.08);transform:translateY(-3px)}
+.contact-card svg{width:48px;height:48px;flex:none;background:#fff;border-radius:12px;padding:9px}
+.contact-card h3{font-size:1.02rem;line-height:1.3}
+.contact-card span{display:block;color:var(--muted);font-size:.9rem;word-break:break-word}
+footer{padding:32px 0;color:#858da9;text-align:center;font-size:.88rem}
+@media(max-width:760px){.card-grid,.contact-grid{grid-template-columns:1fr}.nav-inner{flex-direction:column;padding:8px 0;gap:2px}.nav-links{max-width:100%}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+</style>
 </head>
-
 <body>
-  <div class="orb o1"></div><div class="orb o2"></div><div class="orb o3"></div>
+<nav>
+<div class="container nav-inner">
+<a class="logo" href="#home">Maslah Aliow Abdow</a>
+<div class="nav-links"><a href="#about">About</a><a href="#education">Education</a><a href="#projects">Projects</a><a href="#research">Research</a><a href="#interests">Interests</a><a href="#contact">Contact</a></div>
+</div>
+</nav>
 
-  <nav>
-    <div class="container nav-inner">
-      <a class="logo" href="#home">Maslah<span>.</span></a>
-      <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#education">Education</a>
-        <a href="#projects">Projects</a>
-        <a href="#research">Research</a>
-        <a href="#interests">Interests</a>
-        <a href="#contact">Contact</a>
-      </div>
-    </div>
-  </nav>
+<main>
+<section class="hero" id="home">
+<div class="container">
+<div class="status"><i></i> Open to freelance work</div>
+<h1><span>Maslah</span><span>Aliow</span><span class="light">Abdow</span></h1>
+<p class="roles">Researcher · Founder · Freelancer · Technology Enthusiast</p>
+<p class="lead">Building ideas, solving problems and creating useful digital products across education, software and entrepreneurship.</p>
+<div class="buttons">
+<a class="button" href="#projects">View Projects</a>
+<a class="button secondary" href="#contact">Get In Touch</a>
+</div>
+</div>
+</section>
 
-  <main>
-    <section class="hero" id="home">
-      <div class="container hero-content">
-        <div class="badge"><i></i> Official Website · Open to freelance work</div>
-        <h1 class="gradient-text">Maslah Aliow<br>Abdow</h1>
-        <div class="roles">
-          <span>Researcher</span><span>Founder</span><span>Freelancer</span><span>Technology Enthusiast</span><span>Innovator</span>
-        </div>
-        <p class="lead">
-          Building ideas, solving problems, and exploring what technology can make
-          possible — across Artificial Intelligence, education, software, and
-          entrepreneurship.
-        </p>
-        <div class="buttons">
-          <a class="button" href="#projects">View My Projects</a>
-          <a class="button secondary" href="#contact">Get In Touch</a>
-        </div>
-      </div>
-    </section>
+<section id="about">
+<div class="container">
+<h2 class="section-title">About</h2>
+<p class="section-subtitle">Who I am and what I do.</p>
+<div class="card">
+<p>Maslah Aliow Abdow is an 18-year-old Kenyan researcher, founder, freelancer and innovator with interests in education, software, entrepreneurship, scientific discovery and emerging technologies.</p>
+<p>He enjoys turning ideas into practical solutions and working on projects that address real-world needs, gaining experience in digital product development, web technologies, research and independent project creation.</p>
+<p>He also takes on digital and technology-related freelance work while continuing to expand his skills. His approach: research, create, test, solve problems and improve.</p>
+</div>
+<div class="card quote"><p>&ldquo;You don't need to know everything to build something meaningful. You need curiosity, initiative, persistence, and the willingness to keep learning.&rdquo;</p></div>
+<div class="card quote"><p>&ldquo;Beyond a wholesome discipline, be gentle with yourself.&rdquo;</p><cite>From Desiderata</cite></div>
+</div>
+</section>
 
-    <section id="about">
-      <div class="container">
-        <h2 class="section-title">About Me</h2>
-        <p class="section-subtitle">A little about who I am and what I do.</p>
-        <div class="card">
-          <p>Maslah Aliow Abdow is an 18-year-old Kenyan researcher, founder, freelancer, innovator, and technology enthusiast with interests spanning Artificial Intelligence, education, software, entrepreneurship, scientific discovery, and emerging technologies.</p>
-          <br>
-          <p>He enjoys turning ideas into practical solutions and working on projects that address real-world needs, gaining experience in digital product development, web technologies, AI-powered applications, research, and independent project creation.</p>
-          <br>
-          <p>He is also a freelancer, taking on digital and technology-related work while continuing to expand his skills and experience. His approach: research, create, test, solve problems, and improve.</p>
-        </div>
-        <div class="card quote">
-          <p>&laquo;You don't need to know everything to build something meaningful. You need curiosity, initiative, persistence, and the willingness to keep learning.&raquo;</p>
-        </div>
-        <div class="card quote gentle">
-          <p>&ldquo;Beyond a wholesome discipline, be gentle with yourself.&rdquo;</p>
-          <small>— Max Ehrmann, Desiderata</small>
-        </div>
-      </div>
-    </section>
+<section id="education">
+<div class="container">
+<h2 class="section-title">Education</h2>
+<p class="section-subtitle">Academic background.</p>
+<div class="card">
+<h3>Takaba Boys' Senior School</h3>
+<p>A well-regarded secondary school in Kenya. His studies helped shape his interests in science, research, communication, technology and problem-solving.</p>
+</div>
+</div>
+</section>
 
-    <section id="education">
-      <div class="container">
-        <h2 class="section-title">Education</h2>
-        <div class="card" style="margin-top:30px;">
-          <p>Maslah studied at <strong>Takaba Boys' Senior School</strong>, a well-regarded secondary school in Kenya.</p>
-          <br>
-          <p>His academic background has helped shape his interests in science, research, communication, technology, and problem-solving.</p>
-        </div>
-      </div>
-    </section>
+<section id="projects">
+<div class="container">
+<h2 class="section-title">Projects</h2>
+<p class="section-subtitle">Products I have built and published.</p>
+<div class="card-grid">
+<div class="card project featured">
+<div class="tag">Books · Digital products · Web app</div>
+<h3>Maslah Library</h3>
+<p>A growing online shelf of practical guides, prompts and workbooks written to help people work, earn and learn. Visitors can browse, search by title or topic, filter by category, and order a PDF edition through WhatsApp or email.</p>
+<div class="chips"><span>Practical guides</span><span>Search &amp; filter</span><span>Order via WhatsApp</span><span>Order via email</span><span>PDF editions</span></div>
+<div class="buttons"><a class="button" href="https://maslah-shelf.maslahaliow9.workers.dev/" target="_blank" rel="noopener">Visit Maslah Library</a></div>
+</div>
+<div class="card project">
+<div class="tag">Web app · PWA</div>
+<h3>Duka Debt</h3>
+<p>A web-based debt tracking application that helps users keep track of people who owe them money and the amounts involved.</p>
+<div class="buttons"><a class="button" href="https://duka-debt.maslahaliow9.workers.dev/" target="_blank" rel="noopener">Visit Duka Debt</a></div>
+</div>
+<div class="card project">
+<div class="tag">Study tool · PWA</div>
+<h3>Maslah Academy AI</h3>
+<p>A study assistant that answers KCSE English literature setbook questions using evidence retrieved directly from the actual texts, including The Samaritan and Fathers of Nations.</p>
+<div class="buttons"><a class="button" href="https://maslah-academy.maslahaliow9.workers.dev/" target="_blank" rel="noopener">Visit Maslah Academy AI</a></div>
+</div>
+<div class="card soon"><h3>More projects coming</h3><p>Future technology, software and digital projects will be featured here.</p></div>
+</div>
+</div>
+</section>
 
-    <section id="projects">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">Things I am building and exploring.</p>
-        <div class="card-grid">
+<section id="research">
+<div class="container">
+<h2 class="section-title">Research</h2>
+<p class="section-subtitle">Independent researcher: investigating questions, exploring unfamiliar subjects and developing ideas from what I discover.</p>
+<div class="card-grid">
+<div class="card"><h3>Educational Technology</h3><p>How digital tools can improve the learning experience.</p></div>
+<div class="card"><h3>Technology &amp; Society</h3><p>How emerging technologies can be adapted to solve problems across Africa.</p></div>
+<div class="card"><h3>Business &amp; Innovation</h3><p>How small, practical products can create real value for everyday users.</p></div>
+<div class="card"><h3>Space &amp; Emerging Tech</h3><p>Developments in space exploration and other frontier technologies.</p></div>
+</div>
+</div>
+</section>
 
-          <div class="card project featured p-green">
-            <div class="project-tag">BOOKS • DIGITAL PRODUCTS • WEB APP</div>
-            <h3>Maslah Library <span class="new-badge">NEW</span></h3>
-            <p>A growing online shelf of practical guides, prompts and workbooks written to help people work, earn and learn — and to be used the same day. Visitors can browse the library, search by title or topic, filter by category, and order a PDF edition in one tap through WhatsApp or email.</p>
-            <div class="chips"><span>📚 Practical guides</span><span>🔎 Search &amp; filter</span><span>📲 Order via WhatsApp</span><span>✉️ Order via email</span><span>📄 PDF editions</span></div>
-            <div class="buttons">
-              <a class="button" href="https://maslah-shelf.maslahaliow9.workers.dev/" target="_blank" rel="noopener">Visit Maslah Library</a>
-            </div>
-          </div>
+<section id="interests">
+<div class="container">
+<h2 class="section-title">Interests</h2>
+<p class="section-subtitle">Areas I enjoy learning about.</p>
+<div class="card-grid">
+<div class="card"><h3>Technology</h3><p>Web development, software, digital tools and emerging technologies.</p></div>
+<div class="card"><h3>Education</h3><p>Learning, academic development and making information easier to understand.</p></div>
+<div class="card" style="grid-column:1/-1"><h3>Entrepreneurship</h3><p>Building useful ideas and exploring ways technology can solve real-world problems.</p></div>
+</div>
+</div>
+</section>
 
-          <div class="card project p-orange">
-            <div class="project-tag">WEB APP • PWA</div>
-            <h3>Duka Debt</h3>
-            <p>A web-based debt tracking application designed to help users keep track of people who owe them money and the amounts involved.</p>
-            <div class="buttons">
-              <a class="button" href="https://duka-debt.maslahaliow9.workers.dev/" target="_blank" rel="noopener">Visit Duka Debt</a>
-            </div>
-          </div>
+<section id="contact">
+<div class="container">
+<h2 class="section-title">Get In Touch</h2>
+<p class="section-subtitle">Available for freelance work and collaboration. Choose whichever channel suits you.</p>
+<div class="contact-grid">
 
-          <div class="card project p-violet">
-            <div class="project-tag">AI • RAG • PWA</div>
-            <h3>Maslah Academy AI</h3>
-            <p>An AI-powered study assistant that answers KCSE English literature setbook questions using evidence retrieved directly from the actual texts, including The Samaritan and Fathers of Nations.</p>
-            <div class="buttons">
-              <a class="button" href="https://maslah-academy.maslahaliow9.workers.dev/" target="_blank" rel="noopener">Visit Maslah Academy AI</a>
-            </div>
-          </div>
+<a class="contact-card" href="https://wa.me/254790493563" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#25D366" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<div><h3>WhatsApp</h3><span>+254 790 493563</span></div></a>
 
-          <div class="card soon" style="grid-column:1 / -1;">
-            <h3>🚀 More Projects Coming</h3>
-            <p>This space will feature future technology, software and digital projects created by Maslah Aliow Abdow.</p>
-          </div>
-        </div>
-      </div>
-    </section>
+<a class="contact-card" href="mailto:maslahaliow9@gmail.com">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#4285F4" d="M2 6.5v11A1.5 1.5 0 003.5 19H6V9.2L2 6.5z"/><path fill="#34A853" d="M22 6.5v11a1.5 1.5 0 01-1.5 1.5H18V9.2l4-2.7z"/><path fill="#FBBC04" d="M18 5.3v3.9l4-2.7V5.8c0-1.7-1.9-2.6-3.2-1.6L18 4.8z"/><path fill="#EA4335" d="M6 9.2V5.3l6 4.5 6-4.5v3.9l-6 4.5L6 9.2z"/><path fill="#C5221F" d="M2 5.8v.7l4 2.7V4.8l-.8-.6C3.9 3.2 2 4.1 2 5.8z"/></svg>
+<div><h3>Email (Gmail)</h3><span>maslahaliow9@gmail.com</span></div></a>
 
-    <section id="research">
-      <div class="container">
-        <h2 class="section-title">Research</h2>
-        <p class="section-subtitle">Independent Researcher — investigating questions, exploring unfamiliar subjects, and developing ideas from what I discover.</p>
-        <div class="card-grid">
-          <div class="card c1"><div class="icon-box">🤖</div><h3>Artificial Intelligence</h3><p>Exploring how AI can be applied to real-world education and business problems.</p></div>
-          <div class="card c2"><div class="icon-box">🎓</div><h3>Educational Technology</h3><p>Researching how digital tools and AI can improve the learning experience.</p></div>
-          <div class="card c3"><div class="icon-box">🌍</div><h3>Technology &amp; Society</h3><p>Investigating how emerging technologies can be adapted to solve problems across Africa.</p></div>
-          <div class="card c4"><div class="icon-box">🚀</div><h3>Space &amp; Emerging Tech</h3><p>Following developments in space exploration and other frontier technologies.</p></div>
-        </div>
-      </div>
-    </section>
+<a class="contact-card" href="https://www.linkedin.com/in/maslah-aliow-abdow-7258a2392" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#0A66C2" d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+<div><h3>LinkedIn</h3><span>Maslah Aliow Abdow</span></div></a>
 
-    <section id="interests">
-      <div class="container">
-        <h2 class="section-title">Interests</h2>
-        <p class="section-subtitle">Areas I enjoy learning about and exploring.</p>
-        <div class="card-grid">
-          <div class="card c2"><div class="icon-box">💻</div><h3>Technology</h3><p>Web development, software, digital tools and emerging technologies.</p></div>
-          <div class="card c3"><div class="icon-box">🎓</div><h3>Education</h3><p>Learning, academic development and helping make information easier to understand.</p></div>
-          <div class="card c4" style="grid-column:1 / -1;"><div class="icon-box">🚀</div><h3>Entrepreneurship</h3><p>Building useful ideas and exploring ways technology can solve real-world problems.</p></div>
-        </div>
-      </div>
-    </section>
+<a class="contact-card" href="https://www.upwork.com/freelancers/~0198f79a68316299e5" target="_blank" rel="noopener">
+<svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#14A800" d="M18.561 13.158c-1.102 0-2.135-.467-3.074-1.227l.228-1.076.008-.042c.207-1.143.849-3.06 2.839-3.06 1.492 0 2.703 1.212 2.703 2.703-.001 1.489-1.212 2.702-2.704 2.702zm0-8.14c-2.539 0-4.51 1.649-5.31 4.366-1.22-1.834-2.148-4.036-2.687-5.892H7.828v7.112c-.002 1.406-1.141 2.546-2.547 2.548-1.405-.002-2.543-1.143-2.545-2.548V3.492H0v7.112c0 2.914 2.37 5.303 5.281 5.303 2.913 0 5.283-2.389 5.283-5.303v-1.19c.529 1.107 1.182 2.229 1.974 3.221l-1.673 7.873h2.797l1.213-5.71c1.063.679 2.285 1.109 3.686 1.109 3 0 5.439-2.452 5.439-5.45 0-3-2.439-5.439-5.439-5.439z"/></svg>
+<div><h3>Upwork</h3><span>Hire me for projects</span></div></a>
 
-    <section id="contact">
-      <div class="container">
-        <h2 class="section-title">Get In Touch</h2>
-        <p class="section-subtitle">Email, LinkedIn, Upwork, and Resume — all in one place.</p>
-        <div class="contact-grid">
-          <a class="contact-card" href="mailto:maslahaliow9@gmail.
+</div>
+</div>
+</section>
+</main>
+
+<footer><div class="container">&copy; <span id="yr">2026</span> Maslah Aliow Abdow. All rights reserved.</div></footer>
+<script>document.getElementById('yr').textContent=new Date().getFullYear();</script>
+</body>
+</html>
